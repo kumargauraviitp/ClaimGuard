@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.git/
+.gitignore
+*.md
+.DS_Store
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+test_browser.js

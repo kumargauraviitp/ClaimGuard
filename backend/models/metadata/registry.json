@@ -1,0 +1,30 @@
+{
+    "production": {
+        "version": "v2.0.0",
+        "metadata": {
+            "algorithm": "LightGBM",
+            "balancing": "scale_pos_weight",
+            "sampler": "none",
+            "is_calibrated": false,
+            "n_features": 116,
+            "threshold": 0.47832519576666865,
+            "oof_roc_auc": 0.8399641955406729,
+            "test_roc_auc": 0.8443959481120602,
+            "test_pr_auc": 0.25200758792235434,
+            "test_f1": 0.3269689737470167,
+            "retrained_at": "2026-06-22T02:20:29.927110Z",
+            "description": "Clean retrain: no SMOTE artifacts, no calibration collapse. Uses scale_pos_weight for class balancing."
+        },
+        "promoted_at": "2026-06-22T02:23:39.800378Z"
+    },
+    "candidates": {},
+    "archived": {
+        "v1.0.0": {
+            "version": "v1.0.0",
+            "metadata": {
+                "algorithm": "RandomForest"
+            },
+            "promoted_at": "2026-06-21T18:27:47.431405Z"
+        }
+    }
+}

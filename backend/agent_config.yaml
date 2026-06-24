@@ -1,0 +1,16 @@
+llm:
+  provider: "google"
+  model: "gemini-2.5-flash"
+  temperature: 0.1
+  max_tokens: 8192
+  
+retrieval:
+  top_k: 5
+  
+agent:
+  timeout_seconds: 60
+  max_retries: 3
+  
+# Future-proofing: If we ever switch back to OpenAI or Anthropic
+# provider: "openai"
+# model: "gpt-4o"

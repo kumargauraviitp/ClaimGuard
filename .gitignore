@@ -1,0 +1,179 @@
+# ============================================================
+#  ClaimGuard / Insurance Fraud Detection — .gitignore
+# ============================================================
+
+# ────────────────────────────────────────────────────────────
+#  SECRETS & ENVIRONMENT  (NEVER commit these)
+# ────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+google-credentials.json
+service-account*.json
+
+# ────────────────────────────────────────────────────────────
+#  OPERATING SYSTEM
+# ────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ────────────────────────────────────────────────────────────
+#  EDITORS / IDE
+# ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ════════════════════════════════════════════════════════════
+#  BACKEND  (Python / FastAPI)
+# ════════════════════════════════════════════════════════════
+
+# --- Python bytecode & caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+
+# --- Runtime data (regenerated at runtime — do NOT commit) ---
+backend/logs/
+backend/storage/
+backend/backups/
+*.log
+scratch_out.log
+backend/database_backup.json
+backend/mlflow.db
+
+# --- ML training artifacts (regenerable, large) ---
+#  NOTE: We keep the *serving* artifacts in backend/artifacts/ and
+#  backend/models/ (production.pkl, features.json, training_status.json,
+#  encoder.pkl, scaler.pkl, pipeline.joblib) so the app runs out of the
+#  box. These training-time outputs are ignored:
+backend/mlruns/
+backend/experiments/
+backend/artifacts/tuned_checkpoints/
+backend/artifacts/*_checkpoints/
+
+# --- Datasets (large CSVs — keep out of git, document source instead) ---
+backend/carclaims.csv
+backend/*.csv
+!backend/requirements.txt
+
+# --- Scratch / dev-only scripts ---
+backend/scratch/
+backend/check_users.py
+backend/reset_admin.py
+backend/foo.py
+backend/test.py
+backend/test_train.py
+backend/verify.py
+backend/verify_output.txt
+backend/verify_results.txt
+backend/verify_phase14.py
+backend/progress_monitor.py
+backend/environment_validator.py
+backend/generate_cases.py
+backend/generate_remaining.py
+backend/seed_customer_role.py
+backend/retrain_clean.py
+backend/db_backup.py
+
+# ════════════════════════════════════════════════════════════
+#  FRONTEND  (Next.js / React)
+# ════════════════════════════════════════════════════════════
+
+# --- dependencies ---
+node_modules/
+.pnp
+.pnp.js
+frontend/node_modules/
+
+# --- Next.js build output & cache ---
+.next/
+out/
+build/
+dist/
+frontend/.next/
+.vercel
+
+# --- TypeScript build info & test junk ---
+*.tsbuildinfo
+next-env.d.ts
+frontend/test_browser.js
+.npm
+
+# --- misc frontend ---
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ════════════════════════════════════════════════════════════
+#  DOCKER
+# ════════════════════════════════════════════════════════════
+
+# --- Docker named volumes (local dev state) ---
+pgdata/
+redisdata/
+
+# ════════════════════════════════════════════════════════════
+#  PROJECT ROOT — throwaway / dev-only files
+#  (chat exports, scratch scripts, temp PDFs, test outputs)
+# ════════════════════════════════════════════════════════════
+
+# --- Chat export / scaffolding artifacts (not part of the app) ---
+chat-history.json
+chat-history.md
+chat_to_pdf.py
+export_chat.py
+export_chat_history.py
+
+# --- One-off dev/scratch scripts at repo root ---
+color.py
+fix_landing.py
+generate_fir.py
+test_kpis.py
+test_kpis2.py
+test_kpis3.py
+test_kpis4.py
+test_trend.py
+verify_phase16.py
+verify_phase16_local.py
+
+# --- Temp text files & generated PDFs ---
+#  NOTE: scoped to repo root only — backend/app/fraud_rules/policy.txt
+#  and vehicle.txt are ESSENTIAL whitelist data the fraud engine loads
+#  at runtime, so they must NOT be ignored.
+/script.txt
+/start.txt
+/test_cases.txt
+/FIR-2345.pdf
+*.fir.pdf

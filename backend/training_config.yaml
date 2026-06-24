@@ -1,0 +1,69 @@
+# ML Pipeline Training Configuration
+
+# Random Seed for Reproducibility
+random_seed: 42
+
+# Splitting strategy
+splitting:
+  train_ratio: 0.70
+  test_ratio: 0.30
+  stratify: true
+
+# Cross Validation
+validation:
+  cv_folds: 5
+  stratify: true
+
+# Threshold Search Business Constraints
+# Tuned to surface fraud without flooding investigators with false positives.
+threshold_constraints:
+  target_recall: 0.70
+  target_precision: 0.40
+  target_fpr: 0.10
+
+# Refined Multi-Objective Ranking Weights (Sum equals 1.0)
+# Recall weighted heavily because missing fraud is the costliest error here.
+ranking_weights:
+  f1: 0.25
+  precision: 0.20
+  recall: 0.35
+  roc_auc: 0.10
+  fpr: 0.10        # FPR is minimized; score uses (1 - FPR)
+
+# Optuna Hyperparameter Tuning
+tuning:
+  trials_per_model: 20
+  top_n_models: 3
+
+# Preprocessing & Feature Selection
+preprocessing:
+  variance_threshold: 0.01  # Remove features with low variance
+
+# Samplers to evaluate.
+# - SMOTE  : fast, reliable oversampler — strong baseline (paper: recall ~0.95)
+# - ctgan  : paper's "golden combo" generative sampler (research-grade epochs)
+samplers:
+  - smote
+  - ctgan
+
+# Models to evaluate. The paper's top performers on this exact dataset:
+# GBM (GradientBoosting) reached precision 0.999 / recall 0.999 paired with TGAN.
+# LightGBM is the modern, faster cousin. XGBoost kept for comparison.
+models:
+  - gbm
+  - lightgbm
+  - xgboost
+
+# CTGAN Configuration
+ctgan:
+  mode: "research"  # "development" (1 epoch) was causing the model to learn nothing
+  epochs_development: 1
+  epochs_research: 100   # paper-equivalent training (batch_size 500, 100 epochs)
+  batch_size: 500
+
+# Path configuration
+paths:
+  dataset_path: "carclaims.csv"
+  artifacts_dir: "artifacts"
+  experiments_dir: "experiments"
+  production_model_path: "artifacts/production.pkl"

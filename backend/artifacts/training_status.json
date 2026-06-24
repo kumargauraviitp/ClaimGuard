@@ -1,0 +1,253 @@
+{
+  "status": "completed",
+  "progress": 100.0,
+  "current_step": "Clean retrain completed (no SMOTE, no calibration).",
+  "errors": [],
+  "leaderboard": [
+    {
+      "id": "exp_005",
+      "label": "CTGAN + LIGHTGBM",
+      "sampler": "ctgan",
+      "model": "lightgbm",
+      "metrics": {
+        "accuracy": 0.899851769501575,
+        "precision": 0.24620770128354727,
+        "recall": 0.326625386996904,
+        "specificity": 0.9363421363815531,
+        "sensitivity": 0.326625386996904,
+        "f1": 0.28077178975382566,
+        "roc_auc": 0.833735330117359,
+        "pr_auc": 0.24190245631675267,
+        "fpr": 0.06365786361844698,
+        "fnr": 0.673374613003096,
+        "mcc": 0.23072281861722163,
+        "balanced_accuracy": 0.6314837616892286,
+        "brier": 0.05049356630412642,
+        "kappa": 0.2280889470577736,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 998.203125
+      },
+      "training_time": "108.57s",
+      "optimal_threshold": 0.17,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.34056817235551706,
+      "rank": 1
+    },
+    {
+      "id": "exp_002",
+      "label": "SMOTE + LIGHTGBM",
+      "sampler": "smote",
+      "model": "lightgbm",
+      "metrics": {
+        "accuracy": 0.9042986844543265,
+        "precision": 0.2490272373540856,
+        "recall": 0.29721362229102166,
+        "specificity": 0.9429444225463145,
+        "sensitivity": 0.29721362229102166,
+        "f1": 0.2709950599858857,
+        "roc_auc": 0.8380516345699743,
+        "pr_auc": 0.24764024274561763,
+        "fpr": 0.057055577453685453,
+        "fnr": 0.7027863777089783,
+        "mcc": 0.22119615493083242,
+        "balanced_accuracy": 0.6200790224186681,
+        "brier": 0.050521422749958966,
+        "kappa": 0.220209209533053,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 760.015625
+      },
+      "training_time": "3.20s",
+      "optimal_threshold": 0.2,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.33192982098430357,
+      "rank": 2
+    },
+    {
+      "id": "exp_006",
+      "label": "CTGAN + XGBOOST",
+      "sampler": "ctgan",
+      "model": "xgboost",
+      "metrics": {
+        "accuracy": 0.9006855660552159,
+        "precision": 0.23375,
+        "recall": 0.2894736842105263,
+        "specificity": 0.9395940086716594,
+        "sensitivity": 0.2894736842105263,
+        "f1": 0.25864453665283543,
+        "roc_auc": 0.8356802298123988,
+        "pr_auc": 0.24081833817961906,
+        "fpr": 0.06040599132834056,
+        "fnr": 0.7105263157894737,
+        "mcc": 0.20742240427752648,
+        "balanced_accuracy": 0.6145338464410929,
+        "brier": 0.05247229350143571,
+        "kappa": 0.20606889116927596,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 956.390625
+      },
+      "training_time": "116.27s",
+      "optimal_threshold": 0.17,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.32559321332209007,
+      "rank": 3
+    },
+    {
+      "id": "exp_004",
+      "label": "CTGAN + GBM",
+      "sampler": "ctgan",
+      "model": "gbm",
+      "metrics": {
+        "accuracy": 0.9091161756531406,
+        "precision": 0.24427480916030533,
+        "recall": 0.2476780185758514,
+        "specificity": 0.9512219156484036,
+        "sensitivity": 0.2476780185758514,
+        "f1": 0.24596464258262873,
+        "roc_auc": 0.8285844730191312,
+        "pr_auc": 0.21704778215762588,
+        "fpr": 0.048778084351596376,
+        "fnr": 0.7523219814241486,
+        "mcc": 0.19761636942836402,
+        "balanced_accuracy": 0.5994499671121275,
+        "brier": 0.05081917933864075,
+        "kappa": 0.19761101496779432,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 968.890625
+      },
+      "training_time": "200.32s",
+      "optimal_threshold": 0.18,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.3135229072003625,
+      "rank": 4
+    },
+    {
+      "id": "exp_003",
+      "label": "SMOTE + XGBOOST",
+      "sampler": "smote",
+      "model": "xgboost",
+      "metrics": {
+        "accuracy": 0.920604039281082,
+        "precision": 0.2806652806652807,
+        "recall": 0.2089783281733746,
+        "specificity": 0.9659046117461568,
+        "sensitivity": 0.2089783281733746,
+        "f1": 0.23957409050576753,
+        "roc_auc": 0.8303284760162597,
+        "pr_auc": 0.22385064075060668,
+        "fpr": 0.034095388253843124,
+        "fnr": 0.7910216718266254,
+        "mcc": 0.201042967806417,
+        "balanced_accuracy": 0.5874414699597658,
+        "brier": 0.053263074929047916,
+        "kappa": 0.19863565161903107,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 827.453125
+      },
+      "training_time": "4.30s",
+      "optimal_threshold": 0.26,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.3088987797699789,
+      "rank": 5
+    },
+    {
+      "id": "exp_001",
+      "label": "SMOTE + GBM",
+      "sampler": "smote",
+      "model": "gbm",
+      "metrics": {
+        "accuracy": 0.9080970909764684,
+        "precision": 0.2182410423452769,
+        "recall": 0.20743034055727555,
+        "specificity": 0.9527000394166338,
+        "sensitivity": 0.20743034055727555,
+        "f1": 0.2126984126984127,
+        "roc_auc": 0.8121577739242493,
+        "pr_auc": 0.18233887184831274,
+        "fpr": 0.047299960583366184,
+        "fnr": 0.7925696594427245,
+        "mcc": 0.16399180570550725,
+        "balanced_accuracy": 0.5800651899869547,
+        "brier": 0.05829732240652654,
+        "kappa": 0.16393215290956176,
+        "inference_time_ms": 0.0,
+        "memory_usage_mb": 701.5625
+      },
+      "training_time": "24.86s",
+      "optimal_threshold": 0.34,
+      "parameters": {
+        "random_state": 42,
+        "cv_folds": 5
+      },
+      "score": 0.29273460899819015,
+      "rank": 6
+    }
+  ],
+  "tuned_leaderboard": [
+    {
+      "id": "exp_clean_tuned",
+      "label": "CLEAN LightGBM (scale_pos_weight, no SMOTE, no calibration)",
+      "sampler": "none",
+      "model": "lightgbm",
+      "metrics": {
+        "accuracy": 0.8780804150453956,
+        "precision": 0.24420677361853832,
+        "recall": 0.49458483754512633,
+        "f1": 0.3269689737470167,
+        "roc_auc": 0.8443959481120602,
+        "pr_auc": 0.25200758792235434,
+        "fpr": 0.09749367670728903,
+        "fnr": 0.5054151624548736
+      },
+      "optimal_threshold": 0.47832519576666865,
+      "is_tuned": true,
+      "best_params": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_samples": 20,
+        "reg_alpha": 0.1,
+        "reg_lambda": 0.1,
+        "scale_pos_weight": 15.708978328173375
+      },
+      "model_registry_version": "clean_v1",
+      "pipeline_file": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/production.pkl",
+      "score": 0.3269689737470167,
+      "rank": 1
+    }
+  ],
+  "report_path": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/training_report.md",
+  "production_model": {
+    "sampler": "none",
+    "model": "lightgbm",
+    "score": 0.3269689737470167,
+    "optimal_threshold": 0.47832519576666865,
+    "metrics": {
+      "accuracy": 0.8780804150453956,
+      "precision": 0.24420677361853832,
+      "recall": 0.49458483754512633,
+      "f1": 0.3269689737470167,
+      "roc_auc": 0.8443959481120602,
+      "pr_auc": 0.25200758792235434,
+      "fpr": 0.09749367670728903,
+      "fnr": 0.5054151624548736
+    },
+    "pipeline_file": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/production.pkl"
+  }
+}

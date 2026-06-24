@@ -1,0 +1,110 @@
+[
+  {
+    "id": "exp_005_tuned",
+    "label": "TUNED CTGAN + LIGHTGBM",
+    "sampler": "ctgan",
+    "model": "lightgbm",
+    "metrics": {
+      "accuracy": 0.925853869433636,
+      "precision": 0.31868131868131866,
+      "recall": 0.20938628158844766,
+      "specificity": 0.9714876983214532,
+      "sensitivity": 0.20938628158844766,
+      "f1": 0.25272331154684097,
+      "roc_auc": 0.8482426351383322,
+      "pr_auc": 0.2840286181693239,
+      "fpr": 0.028512301678546792,
+      "fnr": 0.7906137184115524,
+      "mcc": 0.22074352023806862,
+      "balanced_accuracy": 0.5904369899549504,
+      "brier": 0.05378755065573141,
+      "kappa": 0.2154693237003994,
+      "inference_time_ms": 242.80309677124023,
+      "memory_usage_mb": 1065.171875
+    },
+    "optimal_threshold": 0.05,
+    "is_tuned": true,
+    "best_params": {
+      "learning_rate": 0.10017458038168521,
+      "num_leaves": 36,
+      "n_estimators": 82
+    },
+    "model_registry_version": 7,
+    "pipeline_file": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/tuned_checkpoints/exp_005_tuned/pipeline.pkl",
+    "score": 0.3189944956381989,
+    "rank": 1
+  },
+  {
+    "id": "exp_006_tuned",
+    "label": "TUNED CTGAN + XGBOOST",
+    "sampler": "ctgan",
+    "model": "xgboost",
+    "metrics": {
+      "accuracy": 0.9252053610030264,
+      "precision": 0.30939226519337015,
+      "recall": 0.20216606498194944,
+      "specificity": 0.9712577604046907,
+      "sensitivity": 0.20216606498194944,
+      "f1": 0.2445414847161572,
+      "roc_auc": 0.7824554879207885,
+      "pr_auc": 0.25417403575972414,
+      "fpr": 0.028742239595309266,
+      "fnr": 0.7978339350180506,
+      "mcc": 0.21221114075434577,
+      "balanced_accuracy": 0.58671191269332,
+      "brier": 0.05409253124843863,
+      "kappa": 0.20701097979919092,
+      "inference_time_ms": 87.35895156860352,
+      "memory_usage_mb": 1108.875
+    },
+    "optimal_threshold": 0.05,
+    "is_tuned": true,
+    "best_params": {
+      "learning_rate": 0.13774744509592557,
+      "max_depth": 5,
+      "n_estimators": 146,
+      "subsample": 0.7417254380294376,
+      "colsample_bytree": 0.655939001220927,
+      "min_child_weight": 4
+    },
+    "model_registry_version": 9,
+    "pipeline_file": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/tuned_checkpoints/exp_006_tuned/pipeline.pkl",
+    "score": 0.30800790061490424,
+    "rank": 2
+  },
+  {
+    "id": "exp_002_tuned",
+    "label": "TUNED SMOTE + LIGHTGBM",
+    "sampler": "smote",
+    "model": "lightgbm",
+    "metrics": {
+      "accuracy": 0.9342844790315608,
+      "precision": 0.37142857142857144,
+      "recall": 0.1407942238267148,
+      "specificity": 0.9848240974936767,
+      "sensitivity": 0.1407942238267148,
+      "f1": 0.20418848167539266,
+      "roc_auc": 0.838465708121623,
+      "pr_auc": 0.2886372956754609,
+      "fpr": 0.015175902506323292,
+      "fnr": 0.8592057761732852,
+      "mcc": 0.20011316958625855,
+      "balanced_accuracy": 0.5628091606601957,
+      "brier": 0.05305963329856703,
+      "kappa": 0.17710048555790003,
+      "inference_time_ms": 284.69181060791016,
+      "memory_usage_mb": 1094.125
+    },
+    "optimal_threshold": 0.06,
+    "is_tuned": true,
+    "best_params": {
+      "learning_rate": 0.16607464661348276,
+      "num_leaves": 31,
+      "n_estimators": 81
+    },
+    "model_registry_version": 8,
+    "pipeline_file": "/Users/avadakedavaraa/Documents/insurance/backend/artifacts/tuned_checkpoints/exp_002_tuned/pipeline.pkl",
+    "score": 0.3058926731865944,
+    "rank": 3
+  }
+]

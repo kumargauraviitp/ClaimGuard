@@ -1,0 +1,21 @@
+{
+  "venvPath": ".",
+  "venv": "venv",
+  "pythonVersion": "3.14",
+  "pythonPlatform": "Darwin",
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true,
+  "reportMissingModuleSource": "none",
+  "reportMissingTypeStubs": "none",
+  "reportUnknownMemberType": "none",
+  "reportUnknownVariableType": "none",
+  "reportUnknownArgumentType": "none",
+  "exclude": [
+    "**/venv/**",
+    "**/scratch/**",
+    "**/__pycache__/**"
+  ],
+  "extraPaths": [
+    "."
+  ]
+}
