@@ -177,3 +177,6 @@ verify_phase16_local.py
 /test_cases.txt
 /FIR-2345.pdf
 *.fir.pdf
+build_pptx.py
+build_diagrams.py
+
