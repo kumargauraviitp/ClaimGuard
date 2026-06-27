@@ -36,6 +36,11 @@ async def lifespan(app: FastAPI):
     # Startup logic
     from app.analytics.scheduler import scheduler
     from app.database import engine
+    from app.auth.seed_admin import seed_admin
+    
+    # Ensure default admin user exists
+    seed_admin()
+    
     scheduler.start()
     yield
     # Shutdown logic

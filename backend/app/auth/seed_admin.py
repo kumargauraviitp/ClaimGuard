@@ -44,7 +44,7 @@ def seed_admin():
         # Check if admin user exists
         admin_user = db.query(User).filter(User.username == "admin").first()
         if not admin_user:
-            password = generate_random_password()
+            password = "admin123"
             password_hash = PasswordService.get_password_hash(password)
             
             admin_user = User(
@@ -63,10 +63,9 @@ def seed_admin():
             db.commit()
             
             logger.info("="*50)
-            logger.info("ADMIN USER CREATED")
-            logger.info(f"Username: admin")
-            logger.info(f"Password: {password}")
-            logger.info("PLEASE STORE THIS PASSWORD SECURELY. IT WILL NOT BE SHOWN AGAIN.")
+            logger.info("DEFAULT ADMIN USER CREATED")
+            logger.info("Username: admin")
+            logger.info("Password: admin123")
             logger.info("YOU MUST CHANGE THIS PASSWORD ON FIRST LOGIN.")
             logger.info("="*50)
         else:

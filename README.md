@@ -304,6 +304,7 @@ pip install -r requirements.txt
 DATABASE_URL=postgresql+psycopg://insurance_user:insurance_user@localhost:5432/insurance_db
 REDIS_URL=redis://localhost:6379/0
 JWT_SECRET=your-secret-key-change-this
+GROQ_API_KEY=your_groq_api_key_here
 ENV=development
 ```
 
