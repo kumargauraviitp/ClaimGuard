@@ -54,7 +54,7 @@ def get_current_user_or_api_key(
         raise HTTPException(status_code=403, detail="Account is not active")
         
     if user.force_password_change:
-        if request.url.path not in ["/auth/change-password", "/auth/logout"]:
+        if request.url.path not in ["/auth/change-password", "/auth/logout", "/auth/me"]:
             raise HTTPException(status_code=403, detail="Password change required")
             
     setattr(user, "is_service_account", False)

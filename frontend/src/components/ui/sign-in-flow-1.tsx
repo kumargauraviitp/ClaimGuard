@@ -366,7 +366,7 @@ const AnimatedNavLink = ({ href, children }: { href: string; children: React.Rea
   );
 };
 
-function MiniNavbar() {
+export function MiniNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [headerShapeClass, setHeaderShapeClass] = useState('rounded-full');
   const shapeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -511,7 +511,7 @@ export const SignInPage = ({ className }: SignInPageProps) => {
         setTimeout(() => {
           setAuth(profileRes.data, res.data.tokens);
           toast.success("Login successful!");
-          router.push("/app");
+          router.push(profileRes.data.force_password_change ? "/change-password" : "/app");
         }, 2000);
       }
     } catch (err: any) {
@@ -551,7 +551,7 @@ export const SignInPage = ({ className }: SignInPageProps) => {
         setTimeout(() => {
           setAuth(profileRes.data, res.data.tokens);
           toast.success("Login successful!");
-          router.push("/app");
+          router.push(profileRes.data.force_password_change ? "/change-password" : "/app");
         }, 2000);
       }
     } catch (err: any) {
